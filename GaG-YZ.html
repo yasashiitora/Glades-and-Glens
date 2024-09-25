@@ -1,0 +1,459 @@
+<div class="wrapper">
+	<!-- Tales of the Old West -->
+	<div class='sheet-section sheet-section-1'>
+    
+        <div class="full"></div>
+        
+        <div class="left">
+            <div class="leftCol">
+                <label name="dice-modificator" title="# of Dice modificators"  <span data-i18n="dice-modificator" >Modifier</span></label>
+            </div>
+            <div class="rightCol">
+                <input type="number" name="attr_modifikator" class="weaponbox" style="width:100%" value="0" min=-3 max=3>
+            </div>
+                
+            <div class="label"><span data-i18n="Attributes-u">Attributes</span></div>
+            <div class="boxLight"><button type="roll" name="roll_power" value="&{template:simpleAtt}{{rname=^{power}}}{{name=@{name}}}{{attName=^{power}}}{{attMod=@{power}}}{{cond=[[@{hurts}+@{shakes}+@{vexes}+@{doubts}]]}}{{modifier=@{modifikator}}}{{result=[[[[@{power}-@{hurts}-@{shakes}-@{vexes}-@{doubts}+@{modifikator}]]d6>6]]}}"><span data-i18n="power-u"> Power</span></button><input type="number" name="attr_power" min=1 max=5 placeholder=1></div>
+            <div class="boxLight"><button type="roll" name="roll_spry" value="&{template:simpleAtt}{{rname=^{spry}}}{{name=@{name}}}{{attName=^{spry}}}{{attMod=@{spry}}}{{cond=[[@{hurts}+@{shakes}+@{vexes}+@{doubts}]]}}{{modifier=@{modifikator}}}{{result=[[[[@{spry}-@{hurts}-@{shakes}-@{vexes}-@{doubts}+@{modifikator}]]d6>6]]}}"><span data-i18n="spry-u"> Spry</span></button><input type="number" name="attr_spry" min=1 max=5 placeholder=1></div>
+            <div class="boxLight"><button type="roll" name="roll_moxy" value="&{template:simpleAtt}{{rname=^{moxy}}}{{name=@{name}}}{{attName=^{moxy}}}{{attMod=@{moxy}}}{{cond=[[@{hurts}+@{shakes}+@{vexes}+@{doubts}]]}}{{modifier=@{modifikator}}}{{result=[[[[@{moxy}-@{hurts}-@{shakes}-@{vexes}-@{doubts}+@{modifikator}]]d6>6]]}}"><span data-i18n="moxy-u"> Moxy</span></button><input type="number" name="attr_moxy" min=1 max=5 placeholder=1></div>
+            <div class="boxLight"><button type="roll" name="roll_spirit" value="&{template:simpleAtt}{{rname=^{spirit}}}{{name=@{name}}}{{attName=^{spirit}}}{{attMod=@{spirit}}}{{cond=[[@{hurts}+@{shakes}+@{vexes}+@{doubts}]]}} {{modifier=@{modifikator}}}{{result=[[[[@{spirit}-@{hurts}-@{shakes}-@{vexes}-@{doubts}+@{modifikator}]]d6>6]]}}"><span data-i18n="spirit-u"> Spirit</span></button><input type="number" name="attr_spirit" min=1 max=5 placeholder=1></div>
+            
+            <br>
+            
+            <div class="label"><span data-i18n="Conditions-u">Conditions</span></div>
+            <div class="boxLight"><span data-i18n="Hurts-u">Hurts</span><input type="checkbox" name="attr_hurts" value=1 id="hurts1"><label for="hurts1"></label></div>
+            <div class="boxDark"><span data-i18n="Shakes-u">Shakes</span><input type="checkbox" name="attr_shakes" value=1 id="shakes1"><label for="shakes1"></label></div>
+            <div class="boxLight"><span data-i18n="Vexes-u">Vexes</span><input type="checkbox" name="attr_vexes" value=1 id="vexes1"><label for="vexes1"></label></div>
+            <div class="boxDark"><span data-i18n="Doubts-u">Doubts</span><input type="checkbox" name="attr_doubts" value=1 id="doubts1"><label for="doubts1"></label></div>
+            <div class="boxLight"><span data-i18n="Broken-u">Broken</span><input type="checkbox" name="attr_broken" value=1 id="broken1"><label for="broken1"></label></div>
+            
+            <br>
+            
+            <div class="label"><span data-i18n="Skills-u">Skills</span></div>
+            <div class="boxLight"><button type="roll" name="roll_fight" value="&{template:simpleSkill}{{rname=^{fight}}}{{name=@{name}}}{{skillMod=@{fight}}}{{attName=^{power}}}{{attMod=@{power}}}{{cond=[[@{hurts}+@{shakes}+@{vexes}+@{doubts}]]}}{{modifier=@{modifikator}}}{{result=[[[[@{fight}+@{power}-@{hurts}-@{shakes}-@{vexes}-@{doubts}+@{modifikator}]]d6>6]]}}"><span data-i18n="fight (power)-u"> fight (power)</span></button><input type="number" name="attr_fight" min=0 max=5 placeholder="0"></div>
+            <div class="boxLight"><button type="roll" name="roll_force" value="&{template:simpleSkill}{{rname=^{force}}}{{name=@{name}}}{{skillMod=@{force}}}{{attName=^{power}}}{{attMod=@{power}}}{{cond=[[@{hurts}+@{shakes}+@{vexes}+@{doubts}]]}}{{modifier=@{modifikator}}}{{result=[[[[@{force}+@{power}-@{hurts}-@{shakes}-@{vexes}-@{doubts}+@{modifikator}]]d6>6]]}}"><span data-i18n="force (power)-u"> force (power)</span></button><input type="number" name="attr_force" min=0 max=5 placeholder="0"></div>
+            <div class="boxLight"><button type="roll" name="roll_resist" value="&{template:simpleSkill}{{rname=^{resist}}}{{name=@{name}}}{{skillMod=@{resist}}}{{attName=^{power}}}{{attMod=@{power}}}{{cond=[[@{hurts}+@{shakes}+@{vexes}+@{doubts}]]}}{{modifier=@{modifikator}}}{{result=[[[[@{resist}+@{power}-@{hurts}-@{shakes}-@{vexes}-@{doubts}+@{modifikator}]]d6>6]]}}"><span data-i18n="resist (power)-u"> resist (power)</span></button><input type="number" name="attr_resist" min=0 max=5 placeholder="0"></div>
+            <div class="boxLight"><button type="roll" name="roll_stamina" value="&{template:simpleSkill}{{rname=^{stamina}}}{{name=@{name}}}{{skillMod=@{stamina}}}{{attName=^{power}}}{{attMod=@{power}}}{{cond=[[@{hurts}+@{shakes}+@{vexes}+@{doubts}]]}}{{modifier=@{modifikator}}}{{result=[[[[@{stamina}+@{power}-@{hurts}-@{shakes}-@{vexes}-@{doubts}+@{modifikator}]]d6>6]]}}"><span data-i18n="stamina (power)-u"> stamina (power)</span></button><input type="number" name="attr_stamina" min=0 max=5 placeholder="0"></div>
+            <div class="boxDark"><button type="roll" name="roll_move" value="&{template:simpleSkill}{{rname=^{move}}}{{name=@{name}}}{{skillMod=@{move}}}{{attName=^{spry}}}{{attMod=@{spry}}}{{cond=[[@{hurts}+@{shakes}+@{vexes}+@{doubts}]]}}{{modifier=@{modifikator}}}{{result=[[[[@{move}+@{spry}-@{hurts}-@{shakes}-@{vexes}-@{doubts}+@{modifikator}]]d6>6]]}}"><span data-i18n="move (spry)-u"> move (spry)</span></button><input type="number" name="attr_move" min=0 max=5 placeholder="0"></div>
+            <div class="boxDark"><button type="roll" name="roll_ride" value="&{template:simpleSkill}{{rname=^{ride}}}{{name=@{name}}}{{skillMod=@{ride}}}{{attName=^{spry}}}{{attMod=@{spry}}}{{cond=[[@{hurts}+@{shakes}+@{vexes}+@{doubts}]]}}{{modifier=@{modifikator}}}{{result=[[[[@{ride}+@{spry}-@{hurts}-@{shakes}-@{vexes}-@{doubts}+@{modifikator}]]d6>6]]}}"><span data-i18n="ride (spry)-u"> ride (spry)</span></button><input type="number" name="attr_ride" min=0 max=5 placeholder="0"></div>
+            <div class="boxDark"><button type="roll" name="roll_shoot" value="&{template:simpleSkill}{{rname=^{shoot}}}{{name=@{name}}}{{skillMod=@{shoot}}}{{attName=^{spry}}}{{attMod=@{spry}}}{{cond=[[@{hurts}+@{shakes}+@{vexes}+@{doubts}]]}}{{modifier=@{modifikator}}}{{result=[[[[@{shoot}+@{spry}-@{hurts}-@{shakes}-@{vexes}-@{doubts}+@{modifikator}]]d6>6]]}}"><span data-i18n="shoot (spry)-u"> shoot' (spry)</span></button><input type="number" name="attr_shoot" min=0 max=5 placeholder="0"></div>
+            <div class="boxDark"><button type="roll" name="roll_sneak" value="&{template:simpleSkill}{{rname=^{sneak}}}{{name=@{name}}}{{skillMod=@{sneak}}}{{attName=^{spry}}}{{attMod=@{spry}}}{{cond=[[@{hurts}+@{shakes}+@{vexes}+@{doubts}]]}}{{modifier=@{modifikator}}}{{result=[[[[@{sneak}+@{spry}-@{hurts}-@{shakes}-@{vexes}-@{doubts}+@{modifikator}]]d6>6]]}}"><span data-i18n="sneak (spry)-u"> sneak (spry)</span></button><input type="number" name="attr_sneak" min=0 max=5 placeholder="0"></div>
+            <div class="boxLight"><button type="roll" name="roll_observation" value="&{template:simpleSkill}{{rname=^{observation}}}{{name=@{name}}}{{skillMod=@{observation}}}{{attName=^{moxy}}}{{attMod=@{moxy}}}{{cond=[[@{hurts}+@{shakes}+@{vexes}+@{doubts}]]}}{{modifier=@{modifikator}}}{{result=[[[[@{observation}+@{moxy}-@{hurts}-@{shakes}-@{vexes}-@{doubts}+@{modifikator}]]d6>6]]}}"><span data-i18n="observation (moxy)-u"> observation' (moxy)</span></button><input type="number" name="attr_observation" min=0 max=5 placeholder="0"></div>
+            <div class="boxLight"><button type="roll" name="roll_survive" value="&{template:simpleSkill}{{rname=^{survive}}}{{name=@{name}}}{{skillMod=@{survive}}}{{attName=^{moxy}}}{{attMod=@{moxy}}}{{cond=[[@{hurts}+@{shakes}+@{vexes}+@{doubts}]]}}{{modifier=@{modifikator}}}{{result=[[[[@{survive}+@{moxy}-@{hurts}-@{shakes}-@{vexes}-@{doubts}+@{modifikator}]]d6>6]]}}"><span data-i18n="survive (moxy)-u"> survive (moxy)</span></button><input type="number" name="attr_survive" min=0 max=5 placeholder="0"></div>
+            <div class="boxLight"><button type="roll" name="roll_tinker" value="&{template:simpleSkill}{{rname=^{tinker}}}{{name=@{name}}}{{skillMod=@{tinker}}}{{attName=^{moxy}}}{{attMod=@{moxy}}}{{cond=[[@{hurts}+@{shakes}+@{vexes}+@{doubts}]]}}{{modifier=@{modifikator}}}{{result=[[[[@{tinker}+@{moxy}-@{hurts}-@{shakes}-@{vexes}-@{doubts}+@{modifikator}]]d6>6]]}}"><span data-i18n="tinker (moxy)-u"> tinker (moxy)</span></button><input type="number" name="attr_tinker" min=0 max=5 placeholder="0"></div>
+            <div class="boxLight"><button type="roll" name="roll_trailblaze" value="&{template:simpleSkill}{{rname=^{trailblaze}}}{{name=@{name}}}{{skillMod=@{trailblaze}}}{{attName=^{moxy}}}{{attMod=@{moxy}}}{{cond=[[@{hurts}+@{shakes}+@{vexes}+@{doubts}]]}}{{modifier=@{modifikator}}}{{result=[[[[@{trailblaze}+@{moxy}-@{hurts}-@{shakes}-@{vexes}-@{doubts}+@{modifikator}]]d6>6]]}}"><span data-i18n="trailblaze (moxy)-u"> trailblaze (moxy)</span></button><input type="number" name="attr_trailblaze" min=0 max=5 placeholder="0"></div>
+            <div class="boxDark"><button type="roll" name="roll_command" value="&{template:simpleSkill}{{rname=^{command}}}{{name=@{name}}}{{skillMod=@{command}}}{{attName=^{spirit}}}{{attMod=@{spirit}}}{{cond=[[@{hurts}+@{shakes}+@{vexes}+@{doubts}]]}}{{modifier=@{modifikator}}}{{result=[[[[@{command}+@{spirit}-@{hurts}-@{shakes}-@{vexes}-@{doubts}+@{modifikator}]]d6>6]]}}"><span data-i18n="command (spirit)-u"> command' (spirit)</span></button><input type="number" name="attr_command" min=0 max=5 placeholder="0"></div>
+            <div class="boxDark"><button type="roll" name="roll_lore" value="&{template:simpleSkill}{{rname=^{lore}}}{{name=@{name}}}{{skillMod=@{lore}}}{{attName=^{spirit}}}{{attMod=@{spirit}}}{{cond=[[@{hurts}+@{shakes}+@{vexes}+@{doubts}]]}}{{modifier=@{modifikator}}}{{result=[[[[@{lore}+@{spirit}-@{hurts}-@{shakes}-@{vexes}-@{doubts}+@{modifikator}]]d6>6]]}}"><span data-i18n="lore (spirit)-u"> lore' (spirit)</span></button><input type="number" name="attr_lore" min=0 max=5 placeholder="0"></div>
+            <div class="boxDark"><button type="roll" name="roll_magic" value="&{template:simpleSkill}{{rname=^{magic}}}{{name=@{name}}}{{skillMod=@{magic}}}{{attName=^{spirit}}}{{attMod=@{spirit}}}{{cond=[[@{hurts}+@{shakes}+@{vexes}+@{doubts}]]}}{{modifier=@{modifikator}}}{{result=[[[[@{magic}+@{spirit}-@{hurts}-@{shakes}-@{vexes}-@{doubts}+@{modifikator}]]d6>6]]}}"><span data-i18n="magic (spirit)-u"> magic' (spirit)</span></button><input type="number" name="attr_magic" min=0 max=5 placeholder="0"></div>
+            <div class="boxDark"><button type="roll" name="roll_soothe" value="&{template:simpleSkill}{{rname=^{soothe}}}{{name=@{name}}}{{skillMod=@{soothe}}}{{attName=^{spirit}}}{{attMod=@{spirit}}}{{cond=[[@{hurts}+@{shakes}+@{vexes}+@{doubts}]]}}{{modifier=@{modifikator}}}{{result=[[[[@{soothe}+@{spirit}-@{hurts}-@{shakes}-@{vexes}-@{doubts}+@{modifikator}]]d6>6]]}}"><span data-i18n="soothe (spirit)-u"> soothe' (spirit)</span></button><input type="number" name="attr_soothe" min=0 max=5 placeholder="0"></div>
+
+            <br>
+            
+            <div class="label"><span data-i18n="Experience-u">Experience</span></div>
+            <div class="exp">
+                <div class="boxChk"><input type="checkbox" name="attr_exp01" id="exp01"><label for="exp01"></label></div>
+                <div class="boxChk"><input type="checkbox" name="attr_exp02" id="exp02"><label for="exp02"></label></div>
+                <div class="boxChk"><input type="checkbox" name="attr_exp03" id="exp03"><label for="exp03"></label></div>
+                <div class="boxChk"><input type="checkbox" name="attr_exp04" id="exp04"><label for="exp04"></label></div>
+                <div class="boxChk"><input type="checkbox" name="attr_exp05" id="exp05"><label for="exp05"></label></div>
+                <div class="boxChk"><input type="checkbox" name="attr_exp06" id="exp06"><label for="exp06"></label></div>
+                <div class="boxChk"><input type="checkbox" name="attr_exp07" id="exp07"><label for="exp07"></label></div>
+                <div class="boxChk"><input type="checkbox" name="attr_exp08" id="exp08"><label for="exp08"></label></div>
+                <div class="boxChk"><input type="checkbox" name="attr_exp09" id="exp09"><label for="exp09"></label></div>
+                <div class="boxChk"><input type="checkbox" name="attr_exp10" id="exp10"><label for="exp10"></label></div>
+            </div>
+            
+            <br>
+            <div class="label"><span data-i18n="Talents-u">Talents</span></div>
+            <div class="boxInfoText"><textarea name="attr_Talents"></textarea></div>
+            
+            <br>
+            <div class="hideout">
+                <div class="label"><span data-i18n="Hideout-u">Hideout</span></div>
+                <div class="boxInfoText"><textarea name="attr_hideout"></textarea></div>
+            </div>
+            
+            <br>
+            <div class="label"><span data-i18n="Notes-u">Notes</span></div>
+            <div class="boxInfoText"><textarea name="attr_notes"></textarea></div>
+            <div style="clear: both;"></div>
+            
+        </div>
+            
+        <div class="right">
+            <div class="boxInfo" style="border-top:1px solid #000;"><label for="attr_name"><span data-i18n="Name-u">Name</span></label><input type="text" name="attr_name" /></div>
+            <div class="boxInfo">
+                <div class="leftCol"><label for="attr_age"><span data-i18n="Age-u">Age</span></label><input type="number" name="attr_age" min=1 max=50 placeholder=2></div>
+                <div class="rightCol"><label for="attr_type"><span data-i18n="Type-u">Archetype</span></label>
+                    <select name="attr_type">
+                        <option value="badger" data-i18n="Badger-u">Badger</option>
+                        <option value="bird" data-i18n="Bird-u">Bird</option>
+                        <option value="frog" data-i18n="Frog-u">Frog</option>
+                        <option value="lizard" data-i18n="Lizard-u">Lizard</option>
+                        <option value="mink" data-i18n="Mink-u">Mink</option>
+                        <option value="mink" data-i18n="Mink-u">Mink</option>
+                        <option value="mole" data-i18n="Mole-u">Mole</option>
+                        <option value="mouse" data-i18n="Mouse-u">Mouse</option>
+                        <option value="otter" data-i18n="Otter-u">Otter</option>
+                        <option value="toad " data-i18n="Toad-u">Toad </option>
+                        <option value="vole" data-i18n="Vole-u">Vole</option>
+                    </select>
+                </div>
+            </div>
+            <div class="boxInfo"><label for="attr_heritage"><span data-i18n="Heritage-u">Heritage</span></label><textarea name="attr_heritage"></textarea></div>
+            <div class="boxInfo">
+                <div class="leftCol"><label for="attr_gender"><span data-i18n="Gender-u">Gender</span></label><input type="text" name="attr_gender"></div>
+                <div class="rightCol">
+                    <div class="nature">
+                        <label for="attr_nature"><span data-i18n="Nature Points-u">Nature<br>Points</span></label><input type="number" name="attr_nature">
+                    </div>
+                    <div class="nature">
+                        <input type="hidden" name="attr_totalnature" />
+                        <label for="attr_nature_max"><span data-i18n="Max Nature-u">Max<br>Nature</span></label><input type="number" name="attr_nature_max" value="@{totalnature}" disabled="true" />
+                    </div>
+                </div>
+            </div>
+            <div class="boxInfo"><label for="attr_nature"><span data-i18n="Nature-u">Nature</span></label><textarea name="attr_nature"></textarea></div>
+            <div class="boxInfo"><label for="attr_bigdream"><span data-i18n="Big Dream-u">Big Dream</span></label><textarea name="attr_bigdream"></textarea></div>
+            <div class="boxInfo"><label for="attr_description"><span data-i18n="Description-u">Description</span></label><textarea name="attr_description"></textarea></div>
+            <div class="boxInfo"><label for="attr_money"><span data-i18n="Money-u">Money $</span></label><textarea name="attr_money"></textarea></div>
+            <div class="boxInfo"><label for="attr_problem"><span data-i18n="Problem-u">Problem</span></label><textarea name="attr_problem"></textarea></div> 
+            <div class="iconic">
+                <label for="attr_iconic"><span data-i18n="Iconic Item-u">Iconic Item</span><br><span data-i18n="(Bonus +2)-u">(Bonus +2)</span></label>
+                <input type="text" name="attr_iconic">
+                <select name="attr_iconicType">
+                    <option value="@{power}" data-i18n="Power">Power</option>
+                    <option value="@{spry}" data-i18n="Spry">Spry</option>
+                    <option value="@{moxy}" data-i18n="Moxy">Moxy</option>
+                    <option value="@{spirit}" data-i18n="Spirit">Spirit</option>
+                    <option value=0>------</option>
+                    <option value="@{forceTot}" data-i18n="force">force</option>
+                    <option value="@{resistTot}" data-i18n="resist">resist</option>
+                    <option value="@{fightTot}" data-i18n="fight">fight</option>
+                    <option value="@{staminaTot}" data-i18n="stamina">stamina</option>
+                    <option value="@{moveTot}" data-i18n="move">move</option>
+                    <option value="@{rideTot}" data-i18n="ride">ride</option>
+                    <option value="@{shootTot}" data-i18n="shoot">shoot'</option>
+                    <option value="@{sneakTot}" data-i18n="sneak">move</option>
+                    <option value="@{surviveTot}" data-i18n="survive">survive</option>
+                    <option value="@{trailblazeTot}" data-i18n="trailblaze">trailblaze</option>
+                    <option value="@{tinkerTot}" data-i18n="tinker">tinker</option>
+                    <option value="@{observationTot}" data-i18n="observation">observation'</option>
+                    <option value="@{sootheTot}" data-i18n="soothe">soothe'</option>
+                    <option value="@{magicTot}" data-i18n="magic">magic'</option>
+                    <option value="@{loreTot}" data-i18n="lore">lore'</option>
+                    <option value="@{commandTot}" data-i18n="command">command'</option>
+                </select>
+                <button type="roll" name="roll_iconic" value="&{template:simpleItem} {{rname=@{iconic}}} {{name=@{name}}} {{bonus=2}} {{attSkill=@{iconicType}}} {{modifier=@{modifikator}}}{{cond=[[@{hurts}+@{shakes}+@{vexes}+@{doubts}]]}} {{result=[[[[@{iconicType}+2-@{hurts}-@{shakes}-@{vexes}-@{doubts}+@{modifikator}]]d6>6]]}}"></button>
+            </div>
+            <br>
+            <div class="label"><span data-i18n="Relationships-u">Relationships</span></div>
+            <fieldset class="repeating_relationships">
+                <div class="relation">
+                    <input type="text" name="attr_relationshipName" data-i18n-placeholder="relationshipName" placeholder="PC/NPC Name">
+                    <textarea name="attr_relationship"></textarea>
+                </div>
+            </fieldset>
+            <br>
+            
+<!-- Mount section -->
+            <div class="label"><span data-i18n="Mount-u">Mount</span></div>
+			<div class="boxInfo">
+					<div class="mount">
+					    <input class="leftCol" type="text" name="attr_mountName" data-i18n-placeholder="mountName" placeholder="mount name">
+					</div>
+                    <div class="rightCol">
+						<label class="nature" for="attr_mountridemod"> 
+							<span data-i18n="Riding mod-u">Riding<br>mod</span> 
+						</label>
+						<input class="weaponbox" type="number" name="attr_mountridemod" min=-1 max=2 title="Riding modifier">
+
+                    </div>
+					
+                    <div class="boxInfo">
+                        <div class="nature">
+					        <label class="leftCol" for="attr_mountpower">
+							    <span data-i18n="mount power-u">Mount<br>Power</span>
+                            </label>
+							<input class="weaponbox" type="number" name="attr_mountpower"  min=1 max=8 title="Mount Power">
+                        </div>
+                        <div class="nature" >
+						    <label class="rightCol" for="attr_mountspry">
+						        <span data-i18n="mount spry-u">Mount<br>Spry</span>
+                            </label>
+							<input class="weaponbox" type="number" name="attr_mountspry"  min=1 max=6 title="Mount Spry">
+                        </div>
+                        <div class="nature">
+                            <label class="leftCol" for="attr_mountfight">
+                                <span data-i18n="mount fight-u">Mount<br>Fight</span>
+                            </label>
+                            <input class="weaponbox" type="number" name="attr_mountfight" value=0 min=1 max=5 title="Mount Fight"> 
+                        </div>
+                        <div class="nature">
+                            <label class="rightCol" for="attr_mountstamina">
+                                <span data-i18n="mount stamina-u">Mount<br>Stamina</span>
+                            </label>
+                            <input class="weaponbox" type="number"  name="attr_mountstamina"  min=0 max=3 title="Mount Stamina">
+                        </div>
+
+                    </div>
+					<div class="boxInfo"><label for="qualityoption1"><span data-i18n="Quality Opt 1-u">Quality Option#1</span></label>
+						<select name="qualityoption1" placeholder="Quality Option 1" class="rightCol">
+							<option value="AGGRESSIVE" data-i18n="AGGRESSIVE-u">AGGRESSIVE</option>
+							<option value="EASY TO RIDE" data-i18n="EASY TO RIDE-u">EASY TO RIDE</option>
+							<option value="FAST" data-i18n="FAST-u">FAST</option>
+							<option value="GRACEFUL" data-i18n="GRACEFUL-u">GRACEFUL</option>
+							<option value="HOT MOUNT" data-i18n="HOT MOUNT-u">HOT MOUNT</option>
+							<option value="LOYAL" data-i18n="LOYAL-u">LOYAL</option>
+							<option value="VARICOLORED" data-i18n="VARICOLORED-u">VARICOLORED</option>
+							<option value="STEADY" data-i18n="STEADY-u">STEADY</option>
+						</select>
+					</div>
+					<div class="boxInfo"><label for="qualityoption2"><span data-i18n="Quality Opt 2-u">Quality Option#2</span></label>
+						<select name="qualityoption2" class="rightCol">
+							<option value="AGGRESSIVE" data-i18n="AGGRESSIVE-u">AGGRESSIVE</option>
+							<option value="EASY TO RIDE" data-i18n="EASY TO RIDE-u">EASY TO RIDE</option>
+							<option value="FAST" data-i18n="FAST-u">FAST</option>
+							<option value="GRACEFUL" data-i18n="GRACEFUL-u">GRACEFUL</option>
+							<option value="HOT MOUNT" data-i18n="HOT MOUNT-u">HOT MOUNT</option>
+							<option value="LOYAL" data-i18n="LOYAL-u">LOYAL</option>
+							<option value="VARICOLORED" data-i18n="VARICOLORED-u">VARICOLORED</option>
+							<option value="STEADY" data-i18n="STEADY-u">STEADY</option>
+						</select>
+					</div>
+                    <div class="boxInfo"><label for="qualityoption3"><span data-i18n="Quality Opt 3-u">Quality Option#3</span></label>
+						<select name="qualityoption3" class="rightCol">
+							<option value="AGGRESSIVE" data-i18n="AGGRESSIVE-u">AGGRESSIVE</option>
+							<option value="EASY TO RIDE" data-i18n="EASY TO RIDE-u">EASY TO RIDE</option>
+							<option value="FAST" data-i18n="FAST-u">FAST</option>
+							<option value="GRACEFUL" data-i18n="GRACEFUL-u">GRACEFUL</option>
+							<option value="HOT MOUNT" data-i18n="HOT MOUNT-u">HOT MOUNT</option>
+							<option value="LOYAL" data-i18n="LOYAL-u">LOYAL</option>
+							<option value="VARICOLORED" data-i18n="VARICOLORED-u">VARICOLORED</option>
+							<option value="STEADY" data-i18n="STEADY-u">STEADY</option>
+						</select>
+					</div>
+    <!-- Mount roll button future -->
+                    <button type="roll" name="roll_item" value="&{template:simpleItem}{{rname=@{weaponName}}}{{name=@{name}}}{{bonus=@{itemAttackBonus}}}{{weapondamage=@{itemDamageBonus}}}{{attSkill=@{weapontype}}}{{modifier=@{modifikator}}}{{cond=[[@{hurts}+@{shakes}+@{vexes}+@{doubts}]]}} {{result=[[[[@{weapontype}+@{itemAttackBonus}-@{hurts}-@{shakes}-@{vexes}-@{doubts}+@{modifikator}]]d6>6]]}}"></button>
+    <!-- End Mount roll button future -->
+			</div>
+<!-- End Mount section -->
+            <br>
+            
+            <div class="weapons">
+                <div class="label"><span data-i18n="Weapons-u">Weapons</span></div>
+            <fieldset class="repeating_weapons">
+                <div class="weapons">
+                    <input class="leftCol" type="text" name="attr_weaponName" data-i18n-placeholder="weaponName" placeholder="Weapon name">
+                    <label class="rightCol" for="attr_itemDrawbonus"> <span data-i18n="Draw bonus-u">Draw bonus</span> <input class="weaponbox" type="number" name="attr_itemDrawbonus" min=-2 max=2 title="Draw bonus"></label>
+                    <select class="leftCol" name="attr_weapontype" title="Attribute or Skill">
+                        <option value="@{power}" data-i18n="power">power</option>
+                        <option value="@{spry}" data-i18n="spry">spry</option>
+                        <option value="@{moxy}" data-i18n="moxy">moxy</option>
+                        <option value="@{spirit}" data-i18n="spirit">spirit</option>
+                        <option value=0>------</option>
+                        <option value="@{forceTot}" data-i18n="force">force</option>
+                        <option value="@{resistTot}" data-i18n="resist">resist</option>
+                        <option value="@{fightTot}" data-i18n="fight">fight</option>
+                        <option value="@{staminaTot}" data-i18n="stamina">stamina</option>
+                        <option value="@{moveTot}" data-i18n="move">move</option>
+                        <option value="@{rideTot}" data-i18n="ride">ride</option>
+                        <option selected value="@{shootTot}" data-i18n="shoot">shoot'</option>
+                        <option value="@{sneakTot}" data-i18n="sneak">move</option>
+                        <option value="@{surviveTot}" data-i18n="survive">survive</option>
+                        <option value="@{trailblazeTot}" data-i18n="trailblaze">trailblaze</option>
+                        <option value="@{tinkerTot}" data-i18n="tinker">tinker</option>
+                        <option value="@{observationTot}" data-i18n="observation">observation'</option>
+                        <option value="@{sootheTot}" data-i18n="soothe">soothe'</option>
+                        <option value="@{magicTot}" data-i18n="magic">magic'</option>
+                        <option value="@{loreTot}" data-i18n="lore">lore'</option>
+                        <option value="@{commandTot}" data-i18n="command">command'</option>   
+                    </select>
+                    <label class="rightCol" for="attr_itemAttackBonus"><span data-i18n="Attack-u">Attack bonus</span><input class="weaponbox" type="number" name="attr_itemAttackBonus"  min=0 max=2 title="Attack Bonus"></label>
+                    <select class="leftCol" name="attr_actiontype">
+                        <option value="N/A" data-i18n="N/A">N/A</option>
+                        <option selected value="Single" data-i18n="Single">Single</option>
+                        <option value="Double" data-i18n="Double">Double</option>
+                        <option value="Breech" data-i18n="Breech">Breech</option>
+                        <option value="Lever" data-i18n="Lever">Lever</option>
+
+                    </select>
+                    <label class="rightCol" for="attr_weaponDmgBonus"><span data-i18n="Damage-u">Damage</span><input class="weaponbox" type="number" name="attr_weaponDmgBonus" value=1 min=1 max=4 title="Weapon Daamge"> </label>
+                    <select class="leftCol" name="attr_itemRange">
+                        <option value="Arms Length" data-i18n="Arms Length-u">Arms Length</option>
+                        <option value="Near Range" data-i18n="Near Range-u">Near Range</option>
+                        <option selected value="Short Range" data-i18n="Short Range-u">Short Range</option>
+                        <option value="Medium Range" data-i18n="Medium Range-u">Medium Range</option>
+                        <option value="Long Range" data-i18n="Long Range-u">Long Range</option>
+                    </select>
+                    </label>
+                    <label class="rightCol" for="attr_itemCritical"><span data-i18n="Critical-u">Critical</span><input class="weaponbox" type="number" name="attr_itemCritical" value=1 min=0 max=4 title="Critical Rating"> </label>
+                    <div class="weapons"><span data-i18n="Ammo-u">Ammunition</span></div>
+                    <div class="ammo">
+                        <input type="checkbox" class="ammo-boxChk" name="attr_ammo01" id="ammo01">
+                        <input type="checkbox" class="ammo-boxChk" name="attr_ammo02" id="ammo02">
+                        <input type="checkbox" class="ammo-boxChk" name="attr_ammo03" id="ammo03">
+                        <input type="checkbox" class="ammo-boxChk" name="attr_ammo04" id="ammo04">
+                        <input type="checkbox" class="ammo-boxChk" name="attr_ammo05" id="ammo05">
+                        <input type="checkbox" class="ammo-boxChk" name="attr_ammo06" id="ammo06">:
+                        <input type="checkbox" class="ammo-boxChk" name="attr_ammo07" id="ammo07">
+                        <input type="checkbox" class="ammo-boxChk" name="attr_ammo08" id="ammo08">
+                        <input type="checkbox" class="ammo-boxChk" name="attr_ammo09" id="ammo09">
+                        <input type="checkbox" class="ammo-boxChk" name="attr_ammo10" id="ammo10">
+                        <input type="checkbox" class="ammo-boxChk" name="attr_ammo11" id="ammo11">
+                        <input type="checkbox" class="ammo-boxChk" name="attr_ammo12" id="ammo12">
+                        <input type="checkbox" class="ammo-boxChk" name="attr_ammo13" id="ammo13">
+                        <input type="checkbox" class="ammo-boxChk" name="attr_ammo14" id="ammo14">
+                        <input type="checkbox" class="ammo-boxChk" name="attr_ammo15" id="ammo15">
+                    </div>
+                    <button type="roll" name="roll_item" value="&{template:simpleItem} {{rname=@{weaponName}}} {{name=@{name}}} {{bonus=@{itemAttackBonus}}} {{weapondamage=@{weaponDmgBonus}}} {{attSkill=@{weapontype}}} {{modifier=@{modifikator}}} {{cond=[[@{hurts}+@{shakes}+@{vexes}+@{doubts}]]}} {{result=[[[[@{weapontype}+@{itemAttackBonus}-@{hurts}-@{shakes}-@{vexes}-@{doubts}+@{modifikator}]]d6>6]]}}"></button>
+                </div>
+            </fieldset>
+
+            </div>
+            <br>
+            
+            <div class="items">
+                <div class="label"><span data-i18n="Items-u">Items</span></div>
+                <fieldset class="repeating_skills">
+                    <div class="boxInfo">
+                        <input type="text" name="attr_itemName" data-i18n-placeholder="itemName" placeholder="Item name">
+                        <select name="attr_type">
+                            <option value="@{power}" data-i18n="power-u">power</option>
+                            <option value="@{spry}" data-i18n="spry-u">spry</option>
+                            <option value="@{moxy}" data-i18n="moxy-u">moxy</option>
+                            <option value="@{spirit}" data-i18n="spirit-u">spirit</option>
+                            <option value=0>------</option>
+                            <option value="@{forceTot}" data-i18n="force">force</option>
+                            <option value="@{resistTot}" data-i18n="resist">resist</option>
+                            <option value="@{fightTot}" data-i18n="fight">fight</option>
+                            <option value="@{staminaTot}" data-i18n="stamina">stamina</option>
+                            <option value="@{moveTot}" data-i18n="move">move</option>
+                            <option value="@{rideTot}" data-i18n="ride">ride</option>
+                            <option value="@{shootTot}" data-i18n="shoot">shoot'</option>
+                            <option value="@{sneakTot}" data-i18n="sneak">move</option>
+                            <option value="@{surviveTot}" data-i18n="survive">survive</option>
+                            <option value="@{trailblazeTot}" data-i18n="trailblaze">trailblaze</option>
+                            <option value="@{tinkerTot}" data-i18n="tinker">tinker</option>
+                            <option value="@{observationTot}" data-i18n="observation">observation'</option>
+                            <option value="@{sootheTot}" data-i18n="soothe">soothe'</option>
+                            <option value="@{magicTot}" data-i18n="magic">magic'</option>
+                            <option value="@{loreTot}" data-i18n="lore">lore'</option>
+                            <option value="@{commandTot}" data-i18n="command">command'</option>   
+                        </select>
+                        <input type="number" name="attr_itemQty" value=1 min=0 title="Item Quantity">
+                        <input type="number" name="attr_itemBonus" value=1 min=1 max=3 title="Item bonus">
+                        <button type="roll" name="roll_item" value="&{template:simpleItem} {{rname=@{itemName}}} {{name=@{name}}} {{bonus=@{itemBonus}}} {{attSkill=@{type}}}{{modifier=@{modifikator}}} {{cond=[[@{hurts}+@{shakes}+@{vexes}+@{doubts}]]}} {{result=[[[[@{type}+@{itemBonus}-@{hurts}-@{shakes}-@{vexes}-@{doubts}+@{modifikator}]]d6>6]]}}"></button>
+                    </div>
+                </fieldset>
+            </div>
+            
+            <div style="clear: both;"></div>
+        </div>
+        
+        <div style="clear: both;"></div>
+        
+    </div>
+    
+    <div style="clear: both;"></div>
+</div>
+
+    <!-- Skill Attributes -->
+    
+<div class="hidden">
+    <input type="number" name="character_sheet" value="TFTL/TFTF v3.0" disabled="true" />
+    <input type="number" name="attr_forceTot" value="[[@{force}+@{power}]]" disabled="true" />
+    <input type="number" name="attr_resistTot" value="[[@{resist}+@{power}]]" disabled="true" />
+    <input type="number" name="attr_fightTot" value="[[@{fight}+@{power}]]" disabled="true" />
+    <input type="number" name="attr_staminaTot" value="[[@{stamina}+@{power}]]" disabled="true" />
+    <input type="number" name="attr_moveTot" value="[[@{move}+@{spry}]]" disabled="true" />
+    <input type="number" name="attr_rideTot" value="[[@{ride}+@{spry}]]" disabled="true" />
+    <input type="number" name="attr_shootTot" value="[[@{shoot}+@{spry}]]" disabled="true" />
+    <input type="number" name="attr_sneakTot" value="[[@{sneak}+@{spry}]]" disabled="true" />
+    <input type="number" name="attr_surviveTot" value="[[@{survive}+@{moxy}]]" disabled="true" />
+    <input type="number" name="attr_trailblazeTot" value="[[@{trailblaze}+@{moxy}]]" disabled="true" />
+    <input type="number" name="attr_tinkerTot" value="[[@{tinker}+@{moxy}]]" disabled="true" />
+    <input type="number" name="attr_observationTot" value="[[@{observation}+@{moxy}]]" disabled="true" />
+    <input type="number" name="attr_sootheTot" value="[[@{soothe}+@{spirit}]]" disabled="true" />
+    <input type="number" name="attr_magicTot" value="[[@{magic}+@{spirit}]]" disabled="true" />
+    <input type="number" name="attr_loreTot" value="[[@{lore}+@{spirit}]]" disabled="true" />
+    <input type="number" name="attr_commandTot" value="[[@{command}+@{spirit}]]" disabled="true" />
+</div>
+
+<!-- Sheet Worker Scripts -->
+<script type="text/worker">
+    on("change:name", function() {
+        getAttrs(["name"], function(values) {
+            setAttrs({character_name: values.name});
+        });
+    });
+    
+    on("change:age", function() {
+        getAttrs(["age"], function(values) {
+            setAttrs({totalnature: 15-values.age});
+        });
+    });
+</script>
+
+<!-- Roll Templates -->
+    <rolltemplate class="sheet-rolltemplate-simpleAtt">
+        <div class="container">
+            <div class="rollType">
+                {{rname}}
+            </div>
+            <div class="name">
+                {{name}}
+            </div>
+            <div class="calc">
+                {{attName}} ({{attMod}})<br>
+                - <span data-i18n="Conditions-u">Conditions</span> ({{cond}})
+                + <span data-i18n="modifier-u">Modifier</span> ({{modifier}})
+            </div>
+            <div class="result">
+                {{result}} <span data-i18n="Successes-u">Successes</span>
+            </div>
+        </div>
+    </rolltemplate>
+    
+    <rolltemplate class="sheet-rolltemplate-simpleSkill">
+        <div class="container">
+            <div class="rollType">
+                {{rname}}
+            </div>
+            <div class="name">
+                {{name}}
+            </div>
+            <div class="calc">
+                {{rname}} ({{skillMod}})<br>
+                + {{attName}} ({{attMod}})<br>
+                - <span data-i18n="Conditions-u">Conditions</span> ({{cond}})
+                + <span data-i18n="modifier-u">Modifier</span> ({{modifier}})
+            </div>
+            <div class="result">
+                {{result}} <span data-i18n="Successes-u">Successes</span>
+            </div>
+        </div>
+    </rolltemplate>
+    
+    <rolltemplate class="sheet-rolltemplate-simpleItem">
+        <div class="container">
+            <div class="rollType">
+                {{rname}}
+            </div>
+            <div class="name">
+                {{name}}
+            </div>
+            <div class="calc">
+                {{rname}} ({{bonus}})<br>
+                + <span data-i18n="Attribute/Skill-u">Attr/Skill</span> ({{attSkill}})<br>
+                - <span data-i18n="Conditions-u">Conditions</span> ({{cond}})
+                + <span data-i18n="modifier-u">Modifier</span> ({{modifier}})
+            </div>
+            <div class="dmgamt">
+                <span data-i18n="Damage-u">Damage</span> ({{weapondamage}})
+            </div>
+            <div class="result">
+                {{result}} <span data-i18n="Successes-u">Successes</span>
+            </div>
+        </div>
+    </rolltemplate>
